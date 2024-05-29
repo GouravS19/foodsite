@@ -1,8 +1,24 @@
-import React, { useState } from "react"
+import  { useRef, useState } from "react"
+import fromValidation from "./fromValidation"
 const UserLogIn=()=>{
     const [isLogIn,setisLogIn]=useState(true)
+    const [message,setMessage]=useState('')
+
+    const email=useRef(null)
+    const name=useRef(null)
+    const password=useRef(null)
     const handleClick=()=>{
+        email.current.value=null
+        password.current.value=null
+        setMessage('')
         setisLogIn(!isLogIn)
+    }
+    const validate=()=>{
+        let ms=fromValidation(email.current.value,password.current.value,isLogIn,name)
+        setMessage(ms)
+        if(ms==null){
+            console.log("log in or sign up done")
+        }
     }
     return(
         <div className="">
@@ -26,10 +42,11 @@ const UserLogIn=()=>{
                         </div>
                     </div>
                     {/* for input field */}
-                    {!isLogIn && <input type="text" placeholder="Name" className="w-full p-4 border-2 sm:p-6 outline-none border-b-0"/>}
-                    <input type="email" placeholder="Email address" className="w-full p-4 border-2 sm:p-6 outline-none"/>
-                    {!isLogIn && <input type="password" placeholder="Password" className="w-full p-4 border-2 sm:p-6 outline-none border-t-0"/>}
-                    <button className='w-full p-3 bg-orange-400 mt-6 text-white font-semibold rounded-sm' >{isLogIn?"LOGIN":"SIGN UP"}</button>
+                    {!isLogIn && <input type="text" placeholder="Name" ref={name} className="w-full p-4 border-2 sm:p-6 outline-none border-b-0"/>}
+                    <input type="email" placeholder="Email address" ref={email} className="w-full p-4 border-2 sm:p-6 outline-none"/>
+                    <input type="password" placeholder="Password" ref={password} className="w-full p-4 border-2 sm:p-6 outline-none border-t-0"/>
+                    <p className="mt-4 font-semibold">{message}</p>
+                    <button className='w-full p-3 bg-orange-400 mt-5 text-white font-semibold rounded-sm' onClick={validate} >{isLogIn?"LOGIN":"SIGN UP"}</button>
                     <p className="text-[11px] mt-2 font-medium" >By clicking on Login, I accept the Terms & Conditions & Privacy Policy</p>
                 </div>
             </form>
