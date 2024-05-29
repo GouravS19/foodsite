@@ -1,7 +1,7 @@
-
+import UserLogIn from "./UserLogIn";
 const App=()=> {
   return (
-    <div className="bg-red-200">HEllo world</div>
+    <UserLogIn/>
   );
 }
 
