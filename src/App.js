@@ -1,7 +1,7 @@
 
-function App() {
+const App=()=> {
   return (
-    <div>HEllo world</div>
+    <div className="bg-red-200">HEllo world</div>
   );
 }
 
