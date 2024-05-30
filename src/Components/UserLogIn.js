@@ -4,6 +4,7 @@ import {  createUserWithEmailAndPassword,signInWithEmailAndPassword ,updateProfi
 import { auth } from "../firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { useNavigate } from "react-router-dom";
 
 const UserLogIn=()=>{
     const [isLogIn,setisLogIn]=useState(true)
@@ -13,6 +14,9 @@ const UserLogIn=()=>{
     const email=useRef(null)
     const name=useRef(null)
     const password=useRef(null)
+
+    const navigate=useNavigate()
+
     const handleClick=()=>{
         email.current.value=null
         password.current.value=null
@@ -32,6 +36,7 @@ const UserLogIn=()=>{
                     // console.log("log in or sign up done")
 
                     dispatch(addUser({name:user.displayName,email:user.email}))
+                    navigate("/home")
                     setMessage("")
                     // ...
                 })
@@ -55,6 +60,7 @@ const UserLogIn=()=>{
                         // Profile updated!
                         // ...
                         dispatch(addUser({name:user.displayName,email:user.email}))
+                        navigate("/home")
                     }).catch((error) => {
                         // An error occurred
                         // ...
