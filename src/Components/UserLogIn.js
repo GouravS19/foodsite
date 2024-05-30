@@ -23,14 +23,14 @@ const UserLogIn=()=>{
     return(
         <div className="">
             {/* header of the web (logo) */}
-            <div className="flex justify-start shadow-sm">
+            <div className="flex justify-start shadow-sm items-center mt-1">
                 <img src="https://cdn.worldvectorlogo.com/logos/swiggy-logo.svg" alt="logo" className='sm:h-[5rem] h-[4.5rem] sm:pl-16 pl-7 py-4'/>
             </div>
             {/* form section */}
             <form className="flex sm:h-[80vh] h-[85vh] justify-center items-center " onSubmit={(e)=>{
                 e.preventDefault()
             }}>
-                <div className=" w-10/12 sm:w-[35%]">
+                <div className=" w-10/12 sm:w-[30%]">
                     {/* for login and image row */}
                     <div className="grid grid-cols-12 sm:grid-cols-2 mb-6">
                         <div className='py-4 col-span-8 sm:col-span-1'>
@@ -45,7 +45,7 @@ const UserLogIn=()=>{
                     {!isLogIn && <input type="text" placeholder="Name" ref={name} className="w-full p-4 border-2 sm:p-6 outline-none border-b-0"/>}
                     <input type="email" placeholder="Email address" ref={email} className="w-full p-4 border-2 sm:p-6 outline-none"/>
                     <input type="password" placeholder="Password" ref={password} className="w-full p-4 border-2 sm:p-6 outline-none border-t-0"/>
-                    <p className="mt-4 font-semibold">{message}</p>
+                    <p className="mt-4 font-semibold text-[#fc7f19]">{message}</p>
                     <button className='w-full p-3 bg-orange-400 mt-5 text-white font-semibold rounded-sm' onClick={validate} >{isLogIn?"LOGIN":"SIGN UP"}</button>
                     <p className="text-[11px] mt-2 font-medium" >By clicking on Login, I accept the Terms & Conditions & Privacy Policy</p>
                 </div>
