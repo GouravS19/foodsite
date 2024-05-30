@@ -1,8 +1,14 @@
 import  { useRef, useState } from "react"
 import fromValidation from "./fromValidation"
+import {  createUserWithEmailAndPassword,signInWithEmailAndPassword ,updateProfile} from "firebase/auth";
+import { auth } from "../firebase";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
+
 const UserLogIn=()=>{
     const [isLogIn,setisLogIn]=useState(true)
-    const [message,setMessage]=useState('')
+    const [message,setMessage]=useState('Password like: "Testing123!"')
+    const dispatch=useDispatch()
 
     const email=useRef(null)
     const name=useRef(null)
@@ -17,7 +23,57 @@ const UserLogIn=()=>{
         let ms=fromValidation(email.current.value,password.current.value,isLogIn,name)
         setMessage(ms)
         if(ms==null){
-            console.log("log in or sign up done")
+            if(isLogIn){
+                //we will write the log in code here
+                signInWithEmailAndPassword(auth,email.current.value,password.current.value)
+                .then((userCredential) => {
+                    // Signed in 
+                    const user = userCredential.user;
+                    // console.log("log in or sign up done")
+
+                    dispatch(addUser({name:user.displayName,email:user.email}))
+                    setMessage("")
+                    // ...
+                })
+                .catch((error) => {
+                    // const errorCode = error.code;
+                    const errorMessage = error.message;
+                    // console.log(error.message)
+                    setMessage(errorMessage)
+                });
+            }
+            else{
+                //we write the sign up code here
+                createUserWithEmailAndPassword(auth,email.current.value,password.current.value)
+                .then((userCredential) => {
+                    // Signed up 
+                    const user = userCredential.user;
+                    //to update the profile
+                    updateProfile(user, {
+                        displayName: name.current.value, photoURL: "https://example.com/jane-q-user/profile.jpg"
+                    }).then(() => {
+                        // Profile updated!
+                        // ...
+                        dispatch(addUser({name:user.displayName,email:user.email}))
+                    }).catch((error) => {
+                        // An error occurred
+                        // ...
+                    });
+                    console.log(user)
+                    setMessage("")
+                    console.log(user)
+                    // ...
+                })
+                .catch((error) => {
+                    // const errorCode = error.code;
+                    const errorMessage = error.message;
+                    setMessage(errorMessage)
+                    // ..
+                });
+
+
+            }
+
         }
     }
     return(

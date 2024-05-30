@@ -1,6 +1,7 @@
 // import React from 'react'
 
 export default function fromValidation(email,password,isLogIn,name) {
+    // eslint-disable-next-line no-useless-escape
     const emailVal=/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)
     const passVal=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/.test(password)
     
