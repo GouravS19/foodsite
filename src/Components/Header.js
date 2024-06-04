@@ -12,8 +12,9 @@ export const Header=()=> {
     useResData();
     // let userName=useSelector((store)=>{return store.user.name})
     // const [isHamOpen,setisHamOpen]=useState(false)
+    
     return (
-        <div className='grid grid-cols-12  pl-[8%] sm:pl-[8.5%] py-4 shadow-md'>
+        <div className='grid grid-cols-12  pl-[8%] sm:pl-[8.5%] py-[.85rem] shadow-md'>
             {/* for img div  */}
             <div className='col-span-2'>
                 <img src='https://cdn.worldvectorlogo.com/logos/swiggy-1.svg' alt='logo' className='h-[6.7vh] '/>

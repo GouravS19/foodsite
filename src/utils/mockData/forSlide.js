@@ -319,4 +319,4 @@ export const SlideData=[
         "entityId": "swiggy://collectionV2?collection_id=80374&tags=layout_CCS_Poha",
         "frequencyCapping": {}
         }
-]
+        ]

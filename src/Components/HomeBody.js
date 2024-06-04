@@ -1,6 +1,8 @@
 import React from 'react'
 import Dish from './Dish'
 import { useSelector } from 'react-redux'
+import TopRes from './TopRes';
+import FilRes from './FilRes';
 
 export default function HomeBody() {
     // const name=useSelector((store)=>store.user.name)
@@ -33,7 +35,11 @@ export default function HomeBody() {
                 </div>
             </div>
             <Dish/>
-            <hr className='border-[#e7e1e1] mt-[5.5%]'/>
+            <hr className='border-[#e7e1e1] mt-[3%] mb-[1%]'/>
+            <TopRes/>
+            <hr className='border-[#e7e1e1]  mb-[1%] '/>
+            <FilRes/>
+
         </div>
     )
 }

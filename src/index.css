@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 #res_con::-webkit-scrollbar {
     display: none; /* Hide scrollbar in Chrome, Safari, and Opera */
+}
+#top_res::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome, Safari, and Opera */
+}
+.p_price{
+        background: linear-gradient(rgba(27, 30, 36, 0) 0%, rgb(27, 30, 36) 84.21%);
 }
