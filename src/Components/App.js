@@ -4,6 +4,9 @@ import HomeBody from "./HomeBody";
 import Search from "./Search";
 import UserLogIn from "./UserLogIn";
 import {createBrowserRouter} from "react-router-dom"
+import UsingHeader from "./UsingHeader";
+import ResMenu from "./ResMenu";
+import Cart from "./Cart";
 
 
 const App=()=> {
@@ -30,6 +33,21 @@ export const appRouter= createBrowserRouter(
           element:<Search/>
         }
       ]
+    },
+    {
+      path:"/res",
+      element:<UsingHeader/>,
+      children:[
+        {
+          path:"/res/:resIdis",
+          element:<ResMenu/>
+        },
+        {
+          path:"/res/cart",
+          element:<Cart/>
+        }
+      ]
+
     }
   ]
 )

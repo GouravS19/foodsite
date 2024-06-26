@@ -8,6 +8,9 @@
 #top_res::-webkit-scrollbar {
     display: none; /* Hide scrollbar in Chrome, Safari, and Opera */
 }
+#cupon_box::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome, Safari, and Opera */
+}
 .p_price{
         background: linear-gradient(rgba(27, 30, 36, 0) 0%, rgb(27, 30, 36) 84.21%);
 }

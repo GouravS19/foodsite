@@ -3,6 +3,7 @@ import Dish from './Dish'
 import { useSelector } from 'react-redux'
 import TopRes from './TopRes';
 import FilRes from './FilRes';
+import { normalRes } from '../utils/mockData/forNormalRes';
 
 export default function HomeBody() {
     // const name=useSelector((store)=>store.user.name)
@@ -17,6 +18,7 @@ export default function HomeBody() {
         element.scrollLeft += 300;
 
     }
+    // console.log(normalRes)
     return (
         <div className='pl-[9%] sm:px-[13%] pr-[10%] '>
             <div className='flex justify-between text-[1rem] sm:text-[1.45rem] font-bold pt-[6%] sm:pt-[2.2%]  items-center'>
@@ -38,7 +40,7 @@ export default function HomeBody() {
             <hr className='border-[#e7e1e1] mt-[3%] mb-[1%]'/>
             <TopRes/>
             <hr className='border-[#e7e1e1]  mb-[1%] '/>
-            <FilRes/>
+            <FilRes data={normalRes} />
 
         </div>
     )
