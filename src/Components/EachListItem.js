@@ -8,7 +8,7 @@ function EachListItem({data}) {
             <div>
                 <h1>{name}</h1>
                 <div className='flex '>
-                    <span>₹{defaultPrice/100}</span>
+                    <span>₹{isNaN(defaultPrice/100)?"199":defaultPrice/100}</span>
                     <div>
                         <img alt='discount' src={require("../utils/images/tag.png")} className='size-6 inline'/>
                         20% OFF USE SWIGGYIT

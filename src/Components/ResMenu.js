@@ -3,11 +3,13 @@ import { useParams } from 'react-router-dom'
 import { ResMenu_URL } from '../utils/constants'
 import Shimmer from './Shimmer'
 import MenuSection from './MenuSection'
+import generic from "../utils/images/generic.avif"
 
 const CuponBox=({offer,cupon})=>{
     return (
         <div className='border flex min-w-[25%]'>
-                    <img alt='cupon' src={require('../utils/images/dist.png')} className='size-12'/>
+                    {/* <img alt='cupon' src={require('../utils/images/dist.png')} className='size-12'/> */}
+                    <img alt='cupon' src={generic} className='size-12'/>
                     <div>
                         {offer}
                         <br/>
@@ -109,7 +111,12 @@ export default function ResMenu() {
                     data[data.length-1].groupedCard?.cardGroupMap?.REGULAR?.cards.map(
                         (ele,ind)=>{
                             if(ind>0)
-                            return(<MenuSection data={ele} key={ind} />)
+                            {
+                                if(ind<3){
+                                    return(<MenuSection data={ele} key={ind} show={true}/>)   
+                                }
+                                return(<MenuSection data={ele} key={ind} show={false}/>)   
+                            }
                         }
                     )
                 }

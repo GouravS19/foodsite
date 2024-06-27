@@ -3,7 +3,10 @@ import ResCard from './ResCard'
 
 export default function FilRes2({resData}) {
     if(resData==null){
-        return <h2>yet to come</h2>
+        return <br/>
+    }
+    else if(resData.length==0) {
+        return (<h1>There is no restaurnat</h1>)
     }
     return (
         // <div className='flex items-center justify-center bg-slate-500'>
