@@ -1,24 +1,46 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import EachListItem from './EachListItem'
 import { useRef } from 'react'
 
 const MenuSection=({data,show})=> {
     const myRef=useRef(null)
+    const myRefArrow=useRef(null)
     function doToggle(){
         // div.current.cala.add('z')
         
         Array.from(myRef.current.classList).includes('hidden')?myRef.current.classList.remove('hidden'):myRef.current.classList.add('hidden')
         // div.current.className=
         // console.log(Array.from(myRef.current.classList).includes('hidden'))
+
+        //for image rotation 
+        // myRefArrow.current.classList.add('rotate-180')
+
+        Array.from(myRefArrow.current.classList).includes('rotate-180')?myRefArrow.current.classList.remove('rotate-180'):myRefArrow.current.classList.add('rotate-180')
     }
+    useEffect(()=>{
+        if(show==false){
+            myRefArrow.current.classList.add('rotate-180')
+        }
+    },[])
+    
     return (
-        <div className='bg-red-200 border-4 m-3 border-black'>
-            <div className='bg-orange-200'>
-                <div>{data.card.card.title}</div>
+        <div className='bg-[#f2f2f2]  pt-4'>
+            <div className='bg-white cursor-pointer flex justify-between px-5 py-5 items-center' onClick={doToggle} >
+                <div className='font-bold text-[1.07rem]'>
+                    {data.card.card.title}
+                    <span>
+                        {
+                            data.card.card.itemCards?(
+                                ' ('+data.card.card.itemCards.length+')'
+                            ):("")
+                        }
+                    </span>
+                </div>
                 <div>
-                    <button className='border bg-blue-200 p-3' onClick={doToggle}>
-                        click it mother fucker
-                    </button>
+                    <img ref={myRefArrow} src={require("../utils/images/arrow.png")} alt='arrow' className='size-4' />
+                    {/* <button className='border bg-blue-200 p-3' onClick={doToggle}>
+                        click it 
+                    </button> */}
                 </div>
             </div>
             <div className={(show)?'':'hidden'} ref={myRef}>
