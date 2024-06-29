@@ -1,9 +1,15 @@
 import React from 'react'
 import { Res_Item_img_url } from '../utils/constants'
+import { useDispatch } from 'react-redux'
+import {addItem} from '../utils/cartSlice'
 
 function EachListItem({data}) {
     const {name,defaultPrice,description,imageId}=data.card.info
     // console.log(data.card.info)
+    const dispatch=useDispatch()
+    const additemIntoCart=()=>{
+        dispatch(addItem(""))
+    }
     return (
         <div className='border-b-[1.5px] bg-white grid grid-cols-12 pt-5 min-h-[28vh]'>
             <div className='col-span-9 px-5'>
@@ -23,7 +29,7 @@ function EachListItem({data}) {
             {/* each image and add button */}
             <div className='col-span-3  relative'>
                 <img src={Res_Item_img_url+imageId} alt='foodImage' className=' h-[80%] w-[90%] rounded-xl'/>
-                <button className='absolute font-bold text-green-600 text-lg left-[11%] bottom-[12%] w-[68%]  bg-white py-[.35rem] rounded-lg shadow-lg'>
+                <button className='absolute font-bold text-green-600 text-lg left-[11%] bottom-[12%] w-[68%]  bg-white py-[.35rem] rounded-lg shadow-lg hover:bg-gray-200' onClick={additemIntoCart}>
                     ADD
                 </button>
             </div>

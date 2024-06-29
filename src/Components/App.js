@@ -7,6 +7,7 @@ import {createBrowserRouter} from "react-router-dom"
 import UsingHeader from "./UsingHeader";
 import ResMenu from "./ResMenu";
 import Cart from "./Cart";
+import Favourites from "./Favourites";
 
 
 const App=()=> {
@@ -45,6 +46,10 @@ export const appRouter= createBrowserRouter(
         {
           path:"/res/cart",
           element:<Cart/>
+        },
+        {
+          path:"/res/favourites",
+          element:<Favourites/>
         }
       ]
 

@@ -7,6 +7,7 @@ import generic from "../utils/images/generic.avif"
 import delivery from "../utils/images/deli.avif"
 import oneLite from "../utils/images/oneLite.avif"
 import Footer from './Footer'
+import CartPopUp from './CartPopUp'
 
 const CuponBox=({offer,cupon})=>{
     return (
@@ -57,7 +58,7 @@ export default function ResMenu() {
     // console.log(data[3].card.card.gridElements.infoWithStyle.offer)
     return (
         <div>
-            <div className='mx-[23%] mt-[5%] text-[#191c21]'>
+            <div className='mx-[23%] mt-[5%] text-[#0a0b0c]'>
                 {/* it is for the box part of the page */}
                 <div>
                     <h1 className='text-[1.75rem] font-bold text-[#3f3f3f]'>{data[0].card.card.text}</h1>
@@ -143,7 +144,9 @@ export default function ResMenu() {
                     }
                     {/* <MenuSection data={data[data.length-1].groupedCard?.cardGroupMap?.REGULAR?.cards[1]} /> */}
                 </div>
-
+                {/* it it for the cart pop up  */}
+                <CartPopUp/>
+                
                 
             </div>
             <Footer/>

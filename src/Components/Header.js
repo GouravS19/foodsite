@@ -23,6 +23,9 @@ export const Header=()=> {
     }
     const userName=useSelector((store)=>{return store.user.name})
     const userEmail=useSelector((store)=>{return store.user.email})
+    const favclick=()=>{
+        navigate("/res/favourites")
+    }
     return (
         <div className='grid grid-cols-12  pl-[8%] sm:pl-[8.5%] py-[.85rem] shadow-md'>
             {/* for img div  */}
@@ -50,7 +53,9 @@ export const Header=()=> {
                             <div className='text-[#85898c] hover:text-[#474747]'>
                                 {userName?userName:"Name"}</div>
                             <div className='py-5 text-[#85898c] hover:text-[#474747]'>
-                                {userEmail?userEmail:"email@gmail.com"}</div>
+                                {userEmail?userEmail:"email@gmail.com"}
+                            </div>
+                            <div className='pb-5 text-[#85898c] hover:text-[#474747]' onClick={favclick}>Favourites</div>
                             <div className='text-[#85898c] hover:text-[#474747]' onClick={doLogOut}>Log Out</div>
                         </div>
                     </div>
