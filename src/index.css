@@ -20,3 +20,6 @@
 .oneLite{
     background-image: linear-gradient(to right, white , #fff0f1);
 }
+.group:hover .dropdown-menu {
+    display: block;
+}

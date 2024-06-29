@@ -6,7 +6,7 @@ export default function FilRes2({resData}) {
         return <br/>
     }
     else if(resData.length==0) {
-        return (<h1>There is no restaurnat</h1>)
+        return (<h1 className='flex justify-center font-bold text-2xl text-[#3c4052] py-16'>Oops.....There are no restaurnat</h1>)
     }
     return (
         // <div className='flex items-center justify-center bg-slate-500'>

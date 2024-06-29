@@ -6,7 +6,7 @@ import FilRes from './FilRes';
 import { normalRes } from '../utils/mockData/forNormalRes';
 
 export default function HomeBody() {
-    // const name=useSelector((store)=>store.user.name)
+    const name=useSelector((store)=>store.user.name)
 
     const slideLeft=()=>{
         var element = document.getElementById("res_con");
@@ -22,7 +22,7 @@ export default function HomeBody() {
     return (
         <div className='pl-[9%] sm:px-[13%] pr-[10%] '>
             <div className='flex justify-between text-[1rem] sm:text-[1.45rem] font-bold pt-[6%] sm:pt-[2.2%]  items-center'>
-                <h1 className=''>Name{}, what's on your mind?</h1>
+                <h1 className=''>{name?name:"Name"}, what's on your mind?</h1>
                 <div className='flex items-center'>
                     <button className='bg-[#ededf0] p-[.35rem] sm:p-2 rounded-full mr-3 text-white hover:bg-[#e3e3e8]' onClick={()=>{
                         slideLeft()
