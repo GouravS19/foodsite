@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 const UserLogIn=()=>{
     const [isLogIn,setisLogIn]=useState(true)
-    const [message,setMessage]=useState('Password like: "Testing123!"')
+    const [message,setMessage]=useState('Password like: "Testing789!"')
     const dispatch=useDispatch()
 
     const email=useRef(null)
@@ -108,7 +108,7 @@ const UserLogIn=()=>{
                     <input type="email" placeholder="Email address" ref={email} className="w-full p-4 border-2 sm:p-6 outline-none"/>
                     <input type="password" placeholder="Password" ref={password} className="w-full p-4 border-2 sm:p-6 outline-none border-t-0"/>
                     <p className="mt-4 font-semibold text-[#fc7f19]">{message}</p>
-                    <button className='w-full p-3 bg-orange-400 mt-5 text-white font-semibold rounded-sm' onClick={validate} >{isLogIn?"LOGIN":"SIGN UP"}</button>
+                    <button className='w-full p-3 bg-orange-400 mt-5 text-white font-bold rounded-sm' onClick={validate} >{isLogIn?"LOG IN":"SIGN UP"}</button>
                     <p className="text-[11px] mt-2 font-medium" >By clicking on Login, I accept the Terms & Conditions & Privacy Policy</p>
                 </div>
             </form>

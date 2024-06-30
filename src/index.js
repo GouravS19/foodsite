@@ -9,7 +9,7 @@ import { RouterProvider } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Provider store={appStore}>
-        <RouterProvider router={appRouter}></RouterProvider>
+        <RouterProvider router={appRouter} ></RouterProvider>
     </Provider>
 
 );

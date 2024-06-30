@@ -1,8 +1,12 @@
 import React from 'react'
 import CartBill from './CartBill'
 
+
+
 export default function CartContent() {
-    
+    function wantTopay(){
+        document.querySelector("#pay").innerText="Eat Homemade Food...Don't eat junk"
+    }
     return (
         <div className='sm:grid sm:grid-cols-12 pl-[5%] pr-[4%] sm:pl-[10%] sm:pr-[8%] pt-[3.5%] pb-[5.2%] bg-[#e8ebed] ' >
             {/* it is for address part */}
@@ -55,7 +59,7 @@ export default function CartContent() {
                             <img src={require("../utils/images/wallet.png") } alt='location' className='size-5'/>
                         </div> */}
                         <h4 className='text-[#91949e] font-bold text-base sm:text-lg'>Choose payment method</h4>
-                        <div className='w-full sm:mt-3 mt-2  py-2 sm:py-3 text-sm sm:text-base  font-bold text-white bg-[#60b246] flex justify-center'>
+                        <div className='w-full sm:mt-3 mt-2  py-2 sm:py-3 text-sm sm:text-base  font-bold text-white bg-[#60b246] flex justify-center' onClick={wantTopay} id='pay'>
                             PROCEED TO PAY
                         </div>
                     </div>
