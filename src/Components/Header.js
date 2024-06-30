@@ -48,7 +48,7 @@ export const Header=()=> {
                             {userName?userName:"Name"}
                         </span>
                     </div>
-                    <div className='hidden absolute dropdown-menu pt-[1.6rem] sm:pt-7  z-10 -left-20 sm:-left-7 text-xs sm:text-sm font-semibold'> 
+                    <div className='hidden absolute dropdown-menu pt-[1.6rem] sm:pt-[1.6rem]  z-10 -left-20 sm:-left-10 text-xs sm:text-sm font-semibold'> 
                         <div className=' bg-white py-4 sm:py-6 px-7 sm:px-9 rounded-b-sm  border-t-[#fc8019] border-t-2  shadow-2xl '>
                             <div className='text-[#85898c] hover:text-[#474747]'>
                                 {userName?userName:"Name"}</div>
