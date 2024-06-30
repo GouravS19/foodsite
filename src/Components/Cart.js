@@ -13,14 +13,14 @@ export default function Cart() {
   const cartItems=useSelector((store)=>{
     return store.cart
   })
-  const [cartData,setCartData]=useState(cartItems)
-  if(cartData.length==0){
+  // const [cartData,setCartData]=useState(cartItems)
+  if(cartItems.length==0){
     return (
       <NoDataPage textData={data} image={img} />
     )
   }
   return(
-    <div>
+    <div >
       <CartContent/>
     </div>
   )
