@@ -69,8 +69,8 @@ export default function CartBill() {
         }
     }
     return (
-        <div className='col-span-4 min-w-[20vw]  bg-white px-6 pt-6 pb-2' >
-            <div className='pb-4 text-[#91949e] font-bold text-lg '>
+        <div className='sm:col-span-4   bg-white px-4 sm:px-6 pt-6 pb-2  mt-3 sm:mt-0' >
+            <div className='pb-0 sm:pb-4 text-[#91949e] font-bold text-base sm:text-lg '>
                 {"Check Out point".toLocaleUpperCase()}
             </div>
             <div className=''>
@@ -84,14 +84,15 @@ export default function CartBill() {
             </div>
             <div className='w-full my-5  flex p-4 bg-[#ebeced] '>
                 <img src={require("../utils/images/coma.png")} alt='coma' className='size-4 mr-2'/>
-                <input type='text' placeholder='Any suggestions? We will pass it on..' className='outline-none w-full text-sm font-semibold bg-[#ebeced]'/>
+                <input type='text' placeholder='Any suggestions? We will pass it on..' className='outline-none w-full sm:text-sm font-semibold bg-[#ebeced] text-xs'/>
             </div>
-            <div className='flex p-4  border-[1.5px] border-dotted items-center  font-semibold text-sm  text-[#91949e] '>
-                <img src={require("../utils/images/dis2.png")} alt='coma' className='size-7 mr-2'/>
+            <div className='flex sm:p-4 p-3  border-[1.5px] border-dotted items-center  font-semibold
+            sm:text-sm text-xs  text-[#91949e] '>
+                <img src={require("../utils/images/dis2.png")} alt='coma' className='size-6 sm:size-7 mr-2'/>
                 <p>Apply Coupon</p>
             </div>
             {/* billing part  */}
-            <div className='mt-7'>
+            <div className='mt-4 sm:mt-7'>
                 <h2 className='font-semibold'>Bill Details</h2>
                 <div className='flex justify-between text-[#91949e] text-sm mt-2'>
                     <p>Item Total</p>

@@ -42,14 +42,14 @@ export const Header=()=> {
                 </div>
                 
                 <div className=' text-sm sm:text-base  cursor-pointer group relative'>
-                    <div className='flex items-center hover:text-[#fb8019]'>
+                    <div className='flex items-center hover:text-[#3e3d3c]'>
                         <img src={require("../utils/images/dp1.png")} alt='logo' className='h-6 sm:h-[1.5rem] '/>
                         <span className='pl-2 hidden sm:inline font-semibold'>
                             {userName?userName:"Name"}
                         </span>
                     </div>
-                    <div className='hidden absolute dropdown-menu pt-7  z-10 -left-7 text-sm font-semibold'> 
-                        <div className=' bg-white py-6 px-9 rounded-b-sm  border-t-[#fc8019] border-t-2  shadow-2xl '>
+                    <div className='hidden absolute dropdown-menu pt-[1.6rem] sm:pt-7  z-10 -left-20 sm:-left-7 text-xs sm:text-sm font-semibold'> 
+                        <div className=' bg-white py-4 sm:py-6 px-7 sm:px-9 rounded-b-sm  border-t-[#fc8019] border-t-2  shadow-2xl '>
                             <div className='text-[#85898c] hover:text-[#474747]'>
                                 {userName?userName:"Name"}</div>
                             <div className='py-5 text-[#85898c] hover:text-[#474747]'>

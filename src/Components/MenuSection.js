@@ -24,9 +24,9 @@ const MenuSection=({data,show})=> {
     },[])
     
     return (
-        <div className='bg-[#f2f2f2]  pt-4'>
+        <div className='bg-[#f2f2f2] pt-2 sm:pt-4'>
             <div className='bg-white cursor-pointer flex justify-between px-5 py-5 items-center' onClick={doToggle} >
-                <div className='font-bold text-[1.07rem]'>
+                <div className='font-bold text-[1.07rem] sm:text-base text-sm text-[#535665]'>
                     {data.card.card.title}
                     <span>
                         {
