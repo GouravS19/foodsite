@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import empty from '../utils/images/emptyCart.avif'
 import NoDataPage from './NoDataPage'
 import { useSelector } from 'react-redux'
+import CartContent from './CartContent'
 export default function Cart() {
   const data={
     firstText:"Your cart is empty",
@@ -20,7 +21,7 @@ export default function Cart() {
   }
   return(
     <div>
-      there are some thing in the cart
+      <CartContent/>
     </div>
   )
   

@@ -115,7 +115,7 @@ export default function ResMenu() {
                     }
                 </div>
                 {/* cupon part ends here  */}
-                <div className='flex justify-center font-semibold text-xl my-5  text-[#b5b5bc]'>
+                <div className='flex justify-center font-bold text-xl my-5  text-[#414448]'>
                     Menu
                 </div>
                 <div >

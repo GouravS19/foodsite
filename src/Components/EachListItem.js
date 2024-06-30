@@ -1,14 +1,27 @@
 import React from 'react'
 import { Res_Item_img_url } from '../utils/constants'
-import { useDispatch } from 'react-redux'
-import {addItem} from '../utils/cartSlice'
+import { useDispatch, useSelector } from 'react-redux'
+import {addItem, removeItem} from '../utils/cartSlice'
 
 function EachListItem({data}) {
     const {name,defaultPrice,description,imageId}=data.card.info
     // console.log(data.card.info)
     const dispatch=useDispatch()
     const additemIntoCart=()=>{
-        dispatch(addItem(""))
+        dispatch(addItem(data))
+    }
+    const removeItemIntoCart=()=>{
+            dispatch(removeItem(data))
+    }
+    const cartData=useSelector((store)=>store.cart)
+    const findcount=(data)=>{
+        let count=0
+        cartData.forEach(element => {
+            if(element==data){
+                count++
+            }
+        });
+        return count
     }
     return (
         <div className='border-b-[1.5px] bg-white grid grid-cols-12 pt-5 min-h-[28vh]'>
@@ -29,9 +42,17 @@ function EachListItem({data}) {
             {/* each image and add button */}
             <div className='col-span-3  relative'>
                 <img src={Res_Item_img_url+imageId} alt='foodImage' className=' h-[80%] w-[90%] rounded-xl'/>
-                <button className='absolute font-bold text-green-600 text-lg left-[11%] bottom-[12%] w-[68%]  bg-white py-[.35rem] rounded-lg shadow-lg hover:bg-gray-200' onClick={additemIntoCart}>
+                {/* <button className='absolute font-bold text-green-600 text-lg left-[11%] bottom-[12%] w-[68%]  bg-white py-[.35rem] rounded-lg shadow-lg hover:bg-gray-200' onClick={additemIntoCart}>
                     ADD
-                </button>
+                </button> */}
+                <div className='absolute font-bold text-green-600 text-lg left-[11%] bottom-[12%] w-[68%]  bg-white rounded-lg shadow-lg  flex justify-between items-center'>
+                    <div className='hover:bg-gray-200 w-full  py-[.35rem] flex justify-center rounded-l-lg' onClick={()=>{
+                        removeItemIntoCart()
+                    }}>-</div>
+                    <div className='px-4'>{findcount(data)==0?"ADD":findcount(data)}</div>
+                    <div className='hover:bg-gray-200 w-full  py-[.35rem] flex justify-center rounded-r-lg' onClick={additemIntoCart}>+</div>
+
+                </div>
             </div>
         </div>
     )

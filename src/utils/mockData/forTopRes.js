@@ -57,142 +57,6 @@ export const  top_res_data=[
     },
     {
     "info": {
-    "id": "357597",
-    "name": "Subway",
-    "cloudinaryImageId": "63178e3e64d503a479f2a2048a474552",
-    "locality": "Spaze Corporate Park",
-    "areaName": "Sector 69",
-    "costForTwo": "₹350 for two",
-    "cuisines": [
-    "Salads",
-    "Snacks",
-    "Desserts",
-    "Beverages"
-    ],
-    "avgRating": 4.2,
-    "parentId": "2",
-    "avgRatingString": "4.2",
-    "totalRatingsString": "500+",
-    "sla": {
-    "deliveryTime": 47,
-    "lastMileTravel": 2.4,
-    "serviceability": "SERVICEABLE",
-    "slaString": "45-50 mins",
-    "lastMileTravelString": "2.4 km",
-    "iconType": "ICON_TYPE_EMPTY"
-    },
-    "availability": {
-    "nextCloseTime": "2024-06-10 00:00:00",
-    "opened": true
-    },
-    "badges": {},
-    "isOpen": true,
-    "type": "F",
-    "badgesV2": {
-    "entityBadges": {
-    "imageBased": {},
-    "textBased": {},
-    "textExtendedBadges": {}
-    }
-    },
-    "loyaltyDiscoverPresentationInfo": {
-    "logoCtx": {
-    "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
-    },
-    "freedelMessage": "FREE DELIVERY",
-    "badgeType": "BADGE_TYPE_ONE_LITE"
-    },
-    "differentiatedUi": {
-    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-    "differentiatedUiMediaDetails": {
-    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-    "lottie": {},
-    "video": {}
-    }
-    },
-    "reviewsSummary": {},
-    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-    "restaurantOfferPresentationInfo": {}
-    },
-    "analytics": {},
-    "cta": {
-    "link": "https://www.swiggy.com/restaurants/subway-spaze-corporate-park-sector-69-gurgaon-357597",
-    "type": "WEBLINK"
-    }
-    },
-    {
-    "info": {
-    "id": "685802",
-    "name": "La Pino'z Pizza",
-    "cloudinaryImageId": "d20fdc8c86aa8bd0638f47dd013d46f9",
-    "locality": "sector 69",
-    "areaName": "Tulip chowk",
-    "costForTwo": "₹400 for two",
-    "cuisines": [
-    "Pizzas",
-    "Pastas",
-    "Italian",
-    "Desserts",
-    "Beverages"
-    ],
-    "avgRating": 4.1,
-    "parentId": "4961",
-    "avgRatingString": "4.1",
-    "totalRatingsString": "1K+",
-    "sla": {
-    "deliveryTime": 44,
-    "lastMileTravel": 2.4,
-    "serviceability": "SERVICEABLE",
-    "slaString": "40-45 mins",
-    "lastMileTravelString": "2.4 km",
-    "iconType": "ICON_TYPE_EMPTY"
-    },
-    "availability": {
-    "nextCloseTime": "2024-06-04 06:00:00",
-    "opened": true
-    },
-    "badges": {},
-    "isOpen": true,
-    "type": "F",
-    "badgesV2": {
-    "entityBadges": {
-    "imageBased": {},
-    "textBased": {},
-    "textExtendedBadges": {}
-    }
-    },
-    "aggregatedDiscountInfoV3": {
-    "header": "₹125 OFF",
-    "subHeader": "ABOVE ₹199",
-    "discountTag": "FLAT DEAL"
-    },
-    "loyaltyDiscoverPresentationInfo": {
-    "logoCtx": {
-    "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
-    },
-    "freedelMessage": "FREE DELIVERY",
-    "badgeType": "BADGE_TYPE_ONE_LITE"
-    },
-    "differentiatedUi": {
-    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-    "differentiatedUiMediaDetails": {
-    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-    "lottie": {},
-    "video": {}
-    }
-    },
-    "reviewsSummary": {},
-    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-    "restaurantOfferPresentationInfo": {}
-    },
-    "analytics": {},
-    "cta": {
-    "link": "https://www.swiggy.com/restaurants/la-pinoz-pizza-sector-69-tulip-chowk-gurgaon-685802",
-    "type": "WEBLINK"
-    }
-    },
-    {
-    "info": {
     "id": "486661",
     "name": "The Belgian Waffle Co.",
     "cloudinaryImageId": "5116a385bac0548e06c33c08350fbf11",
@@ -583,6 +447,142 @@ export const  top_res_data=[
     "link": "https://www.swiggy.com/restaurants/burgerama-sohna-road-gurgaon-468763",
     "type": "WEBLINK"
     }
+    },
+    {
+        "info": {
+        "id": "357597",
+        "name": "Subway",
+        "cloudinaryImageId": "63178e3e64d503a479f2a2048a474552",
+        "locality": "Spaze Corporate Park",
+        "areaName": "Sector 69",
+        "costForTwo": "₹350 for two",
+        "cuisines": [
+        "Salads",
+        "Snacks",
+        "Desserts",
+        "Beverages"
+        ],
+        "avgRating": 4.2,
+        "parentId": "2",
+        "avgRatingString": "4.2",
+        "totalRatingsString": "500+",
+        "sla": {
+        "deliveryTime": 47,
+        "lastMileTravel": 2.4,
+        "serviceability": "SERVICEABLE",
+        "slaString": "45-50 mins",
+        "lastMileTravelString": "2.4 km",
+        "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+        "nextCloseTime": "2024-06-10 00:00:00",
+        "opened": true
+        },
+        "badges": {},
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+        "entityBadges": {
+        "imageBased": {},
+        "textBased": {},
+        "textExtendedBadges": {}
+        }
+        },
+        "loyaltyDiscoverPresentationInfo": {
+        "logoCtx": {
+        "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
+        },
+        "freedelMessage": "FREE DELIVERY",
+        "badgeType": "BADGE_TYPE_ONE_LITE"
+        },
+        "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+        "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+        "lottie": {},
+        "video": {}
+        }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {},
+        "cta": {
+        "link": "https://www.swiggy.com/restaurants/subway-spaze-corporate-park-sector-69-gurgaon-357597",
+        "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+        "id": "685802",
+        "name": "La Pino'z Pizza",
+        "cloudinaryImageId": "d20fdc8c86aa8bd0638f47dd013d46f9",
+        "locality": "sector 69",
+        "areaName": "Tulip chowk",
+        "costForTwo": "₹400 for two",
+        "cuisines": [
+        "Pizzas",
+        "Pastas",
+        "Italian",
+        "Desserts",
+        "Beverages"
+        ],
+        "avgRating": 4.1,
+        "parentId": "4961",
+        "avgRatingString": "4.1",
+        "totalRatingsString": "1K+",
+        "sla": {
+        "deliveryTime": 44,
+        "lastMileTravel": 2.4,
+        "serviceability": "SERVICEABLE",
+        "slaString": "40-45 mins",
+        "lastMileTravelString": "2.4 km",
+        "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+        "nextCloseTime": "2024-06-04 06:00:00",
+        "opened": true
+        },
+        "badges": {},
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+        "entityBadges": {
+        "imageBased": {},
+        "textBased": {},
+        "textExtendedBadges": {}
+        }
+        },
+        "aggregatedDiscountInfoV3": {
+        "header": "₹125 OFF",
+        "subHeader": "ABOVE ₹199",
+        "discountTag": "FLAT DEAL"
+        },
+        "loyaltyDiscoverPresentationInfo": {
+        "logoCtx": {
+        "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
+        },
+        "freedelMessage": "FREE DELIVERY",
+        "badgeType": "BADGE_TYPE_ONE_LITE"
+        },
+        "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+        "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+        "lottie": {},
+        "video": {}
+        }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {},
+        "cta": {
+        "link": "https://www.swiggy.com/restaurants/la-pinoz-pizza-sector-69-tulip-chowk-gurgaon-685802",
+        "type": "WEBLINK"
+        }
     },
     {
     "info": {
